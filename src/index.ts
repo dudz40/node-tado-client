@@ -516,7 +516,7 @@ export class Tado {
                 'horizontalSwing',
                 'light',
             ].forEach((prop) => {
-                if (overlay.hasOwnProperty(prop)) {
+                if (overlay.hasOwnProperty(prop) || overlay.power === 'ON') {
                     if (
                         typeof (overlay as any)[prop] === 'string' ||
                         (overlay as any)[prop] instanceof String
