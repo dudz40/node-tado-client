@@ -460,6 +460,7 @@ export class Tado {
             mode?: any
             temperature?: Temperature
             fanLevel?: any
+            fanSpeed?: any
             verticalSwing?: any
             horizontalSwing?: any
             light?: any
@@ -510,6 +511,7 @@ export class Tado {
                 'mode',
                 'temperature',
                 'fanLevel',
+                'fanSpeed',
                 'verticalSwing',
                 'horizontalSwing',
                 'light',
