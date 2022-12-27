@@ -2,7 +2,6 @@
     "compilerOptions": {
         "target": "ES2019",
         "module": "commonjs",
-        "lib": [],
         "noEmit": false,
         "strict": true,
         "noUnusedLocals": true,

@@ -299,11 +299,12 @@ class Tado {
                 'mode',
                 'temperature',
                 'fanLevel',
+                'fanSpeed',
                 'verticalSwing',
                 'horizontalSwing',
                 'light',
             ].forEach((prop) => {
-                if (overlay.hasOwnProperty(prop)) {
+                if (overlay.hasOwnProperty(prop) || overlay.power === 'ON') {
                     if (typeof overlay[prop] === 'string' ||
                         overlay[prop] instanceof String) {
                         overlay_config.overlay.setting[prop] = overlay[prop].toUpperCase();
@@ -315,6 +316,7 @@ class Tado {
             });
             config.overlays.push(overlay_config);
         }
+        console.log(JSON.stringify(config));
         return this.apiCall(`/api/v2/homes/${home_id}/overlay`, 'post', config);
     }
     /**

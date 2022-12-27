@@ -64,6 +64,7 @@ export declare class Tado {
         mode?: any;
         temperature?: Temperature;
         fanLevel?: any;
+        fanSpeed?: any;
         verticalSwing?: any;
         horizontalSwing?: any;
         light?: any;
