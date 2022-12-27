@@ -516,7 +516,7 @@ export class Tado {
                 'horizontalSwing',
                 'light',
             ].forEach((prop) => {
-                if (overlay.hasOwnProperty(prop) || overlay.power === 'ON') {
+                if (overlay.hasOwnProperty(prop)) {
                     if (
                         typeof (overlay as any)[prop] === 'string' ||
                         (overlay as any)[prop] instanceof String
@@ -534,7 +534,6 @@ export class Tado {
 
             config.overlays.push(overlay_config)
         }
-        console.log(JSON.stringify(config));
         return this.apiCall(`/api/v2/homes/${home_id}/overlay`, 'post', config)
     }
 
